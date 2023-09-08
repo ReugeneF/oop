@@ -2,12 +2,15 @@
 declare(strict_types=1);
 
 require_once 'games.php';
+$games = [
+    new Game("Call of Duty","FPS Shooter",65,"Action"),
 
-$game1 = new Game("Call of Duty","FPS Shooter",65,"Action");
-$game2 = new Game("Fifa 2023", "Soccer game", 50, "Sport");
-$game3 = new Game("Wii sport", "Sport", 20,"Sport");
-echo $game1->showGame();
-echo $game2->showGame();
-echo $game3->showGame();
+    new Game("Fifa 2023", "Soccer game", 50, "Sport"),
 
-var_dump($game1);
+    new Game("Wii sport", "Sport", 20,"Sport")
+
+];
+
+foreach ($games as $game) {
+    echo $game->showGame() . "\n";
+}
